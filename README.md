@@ -15,9 +15,7 @@ Vizora is a Django-based web application that provides automated Excel and CSV f
 3) Data Analysis & Visualization
    
         Generates bar charts using matplotlib
-   
-        Displays processed data in formatted HTML tables
-   
+    
         Provides data summaries and insights
 
    
