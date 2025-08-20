@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vizora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-200 min-h-screen p-6">
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+      <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">📊 Generated Report</h1>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="{% url 'export_report' 'csv' %}" class="px-6 py-3 bg-blue-200 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">Export CSV</a>
+        <a href="{% url 'export_report' 'excel' %}" class="px-6 py-3 bg-blue-200 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">Export Excel</a>
+        <a href="{% url 'upload' %}" class="px-6 py-3 bg-blue-200 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">Upload New File</a>
+        <a href="{% url 'history' %}" class="px-6 py-3 bg-blue-200 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">View History</a>
+      </div>
+
+      <div class="overflow-x-auto mb-8 border border-gray-200 rounded-lg shadow">
+        <div class="min-w-full text-sm text-gray-800">{{ rows|safe }}</div>
+      </div>
+
+      {% if chart %}
+        <div class="bg-gray-50 p-6 rounded-lg shadow mt-6">
+          <h2 class="text-2xl font-bold text-gray-700 mb-4">Bar Chart</h2>
+          <img src="data:image/png;base64,{{ chart }}" class="rounded-lg border border-gray-200 shadow-md w-full max-h-[500px] object-contain" />
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
