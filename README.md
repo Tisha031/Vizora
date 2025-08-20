@@ -29,8 +29,6 @@ Vizora is a Django-based web application that provides automated Excel and CSV f
        Tracks all uploaded files with timestamps
    
        Records processing status
-   
-       Provides access to historical reports
 
 # Key Features
 
