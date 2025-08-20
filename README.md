@@ -21,9 +21,7 @@ Vizora is a Django-based web application that provides automated Excel and CSV f
    
 4) Report Export
    
-        Exports processed data to CSV format
-   
-        Exports processed data to Excel format
+        Exports processed data to CSV format & Excel format
    
         Maintains data integrity during export
 5) Report History
